@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page for jsoup testing</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Test HTML</h1>
+    <p>
+        This is an example of an <a href="https://example.com" target="_blank" style="color: blue; text-decoration: none;" onclick="alert('You clicked the link!')" onmouseover="this.style.color='red'" onmouseout="this.style.color='blue'">anchor tag</a> with various attributes.
+    </p>
+    
+    <img src="https://via.placeholder.com/150" alt="Placeholder Image" usemap="#image-map" style="border: 2px solid #000;" onclick="alert('Image clicked!')" onmouseover="this.style.borderColor='red'" onmouseout="this.style.borderColor='#000'">
+
+    <map name="image-map">
+        <area shape="rect" coords="34,44,270,350" alt="Rectangle Area" href="https://example.com/rectangle" style="cursor: pointer;" onclick="alert('Rectangle area clicked!')" onmouseover="this.style.backgroundColor='yellow'" onmouseout="this.style.backgroundColor='transparent'">
+        <area shape="circle" coords="100,58,50" alt="Circle Area" href="https://example.com/circle" style="cursor: pointer;" onclick="alert('Circle area clicked!')" onmouseover="this.style.backgroundColor='lightblue'" onmouseout="this.style.backgroundColor='transparent'">
+    </map>
+
+    <button id="myButton">Click me</button>
+
+    <script>
+        document.getElementById("myButton").onclick = function() {
+            alert("Button was clicked!");
+        };
+    </script>
+    
+</body>
+</html>
